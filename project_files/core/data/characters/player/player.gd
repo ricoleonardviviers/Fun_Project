@@ -9,11 +9,12 @@ var state: States = States.IDLE
 @export var jump_power: int
 @export var max_speed: int
 var can_double_jump: int
-
-var last_checkpoint: Node2D
-
-
 var dead: bool
+
+# Variables used for level
+var last_checkpoint: Node2D
+var exit: String
+var on_exit: bool
 
 func _physics_process(delta: float) -> void:
 	match_states(delta)
@@ -25,6 +26,8 @@ func get_input() -> float:
 
 
 func match_states(delta: float) -> void:
+	if Input.is_action_just_pressed("interact") and on_exit:
+		get_tree().change_scene_to_file(exit)
 	match state:
 		States.IDLE:
 			if not is_zero_approx(get_input()):
