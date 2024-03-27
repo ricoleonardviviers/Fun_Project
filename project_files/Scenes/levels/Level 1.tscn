@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfucgx4nl3cv5"]
+[gd_scene load_steps=8 format=3 uid="uid://cfucgx4nl3cv5"]
 
 [ext_resource type="Texture2D" uid="uid://5o1puej52eu5" path="res://Assets/Terrain/spritesheet (1).png" id="1_jc2i4"]
 [ext_resource type="PackedScene" uid="uid://r4qet7clio4" path="res://core/data/checkpoint/checkpoint.tscn" id="2_ds40c"]
 [ext_resource type="PackedScene" uid="uid://bpwy5kx72x2ut" path="res://core/data/hazards/spike.tscn" id="2_hs8lq"]
 [ext_resource type="PackedScene" uid="uid://cqdltmpmw65c4" path="res://core/data/doors/exit.tscn" id="5_6hrmx"]
-[ext_resource type="PackedScene" uid="uid://balfrvo8j60g" path="res://core/data/collectables/key.tscn" id="6_etkci"]
 [ext_resource type="PackedScene" uid="uid://38rgnvjuaok" path="res://core/data/doors/entrance.tscn" id="6_lso8d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jsxsh"]
@@ -137,5 +136,3 @@ layer_0/tile_data = PackedInt32Array(327680, 131072, 3, 327681, 196608, 3, 32768
 
 [node name="Exit" parent="." instance=ExtResource("5_6hrmx")]
 position = Vector2(952, 250)
-
-[node name="Key" parent="." instance=ExtResource("6_etkci")]
