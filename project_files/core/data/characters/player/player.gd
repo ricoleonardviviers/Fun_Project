@@ -30,7 +30,7 @@ func match_states(delta: float) -> void:
 			if not is_zero_approx(get_input()):
 				state = States.WALK
 				return
-			if is_on_floor() and Input.is_action_just_pressed("jump"):
+			if is_on_floor() and Input.is_action_pressed("jump"):
 				state = States.JUMP
 				velocity.y = -jump_power
 			velocity.x = 0

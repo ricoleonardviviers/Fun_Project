@@ -209,7 +209,7 @@ max_speed = 175
 sprite_frames = SubResource("SpriteFrames_8vw1s")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.297628
+frame_progress = 0.372668
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 28)
