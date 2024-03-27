@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpwy5kx72x2ut"]
+
+[ext_resource type="Script" path="res://core/data/hazards/spike.gd" id="1_7y1d8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbysh"]
+
+[node name="Spike" type="Area2D"]
+script = ExtResource("1_7y1d8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_mbysh")
+debug_color = Color(1, 0.00532485, 0.0608502, 0.42)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
