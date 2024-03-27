@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfucgx4nl3cv5"]
+[gd_scene load_steps=7 format=3 uid="uid://cfucgx4nl3cv5"]
 
 [ext_resource type="Texture2D" uid="uid://5o1puej52eu5" path="res://Assets/Terrain/spritesheet (1).png" id="1_jc2i4"]
 [ext_resource type="PackedScene" uid="uid://bombn3fmiomqu" path="res://core/data/characters/player/player.tscn" id="2_d0yag"]
+[ext_resource type="PackedScene" uid="uid://bpwy5kx72x2ut" path="res://core/data/hazards/spike.tscn" id="3_1gir5"]
+[ext_resource type="PackedScene" uid="uid://r4qet7clio4" path="res://core/data/checkpoint/checkpoint.tscn" id="4_irpfs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jsxsh"]
 texture = ExtResource("1_jc2i4")
@@ -128,3 +130,9 @@ layer_0/tile_data = PackedInt32Array(327680, 131072, 3, 327681, 196608, 3, 32768
 position = Vector2(132, 292)
 jump_power = 750
 max_speed = 250
+
+[node name="Spike" parent="." instance=ExtResource("3_1gir5")]
+position = Vector2(414, 293)
+
+[node name="Area2D" parent="Spike" instance=ExtResource("4_irpfs")]
+position = Vector2(-376, 63)
