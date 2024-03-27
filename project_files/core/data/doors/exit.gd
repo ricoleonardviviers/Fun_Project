@@ -13,7 +13,7 @@ func _ready() -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body is Player:
+	if body is Player and body.has_key:
 		body.on_exit = true
 		body.exit = self
 
