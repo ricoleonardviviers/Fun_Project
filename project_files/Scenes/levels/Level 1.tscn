@@ -1,6 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfucgx4nl3cv5"]
+[gd_scene load_steps=8 format=3 uid="uid://cfucgx4nl3cv5"]
 
 [ext_resource type="Texture2D" uid="uid://5o1puej52eu5" path="res://Assets/Terrain/spritesheet (1).png" id="1_jc2i4"]
+[ext_resource type="PackedScene" uid="uid://r4qet7clio4" path="res://core/data/checkpoint/checkpoint.tscn" id="2_ds40c"]
+[ext_resource type="PackedScene" uid="uid://bpwy5kx72x2ut" path="res://core/data/hazards/spike.tscn" id="2_hs8lq"]
+[ext_resource type="PackedScene" uid="uid://cqdltmpmw65c4" path="res://core/data/doors/exit.tscn" id="5_6hrmx"]
 [ext_resource type="PackedScene" uid="uid://38rgnvjuaok" path="res://core/data/doors/entrance.tscn" id="6_lso8d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jsxsh"]
@@ -118,8 +121,18 @@ sources/0 = SubResource("TileSetAtlasSource_jsxsh")
 [node name="Entrance" parent="." instance=ExtResource("6_lso8d")]
 position = Vector2(35, 327)
 
+[node name="Area2D" parent="Entrance" instance=ExtResource("2_ds40c")]
+position = Vector2(0, 49)
+
+[node name="Spike" parent="." instance=ExtResource("2_hs8lq")]
+position = Vector2(769, 271)
+scale = Vector2(2.5, 2)
+
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(0.3, 0.3)
 tile_set = SubResource("TileSet_p3lrv")
 format = 2
 layer_0/tile_data = PackedInt32Array(327680, 131072, 3, 327681, 196608, 3, 327682, 262144, 3, 262149, 65536, 3, 262152, 131072, 3, 262153, 196608, 3, 262154, 196608, 3, 262155, 196608, 3, 262156, 262144, 3, 262144, 196608, 1, 262145, 262144, 1)
+
+[node name="Exit" parent="." instance=ExtResource("5_6hrmx")]
+position = Vector2(952, 250)
