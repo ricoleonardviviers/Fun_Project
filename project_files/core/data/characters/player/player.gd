@@ -58,7 +58,13 @@ func match_states(delta: float) -> void:
 		
 		States.FALL:
 			if is_on_floor():
-				state = States.WALK
+				var collider = get_last_slide_collision().get_collider()
+				if collider is Enemy:
+					collider.health -= 1
+					state = States.JUMP
+					velocity.y = -jump_power - (jump_power/3)
+				else:
+					state = States.WALK
 				return
 			velocity.x = max_speed * get_input()
 			velocity.y += 980 * delta

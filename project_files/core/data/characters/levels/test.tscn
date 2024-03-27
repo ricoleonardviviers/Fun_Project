@@ -10,6 +10,7 @@ size = Vector2(166, 20)
 
 [node name="Player" parent="." instance=ExtResource("1_4jp6e")]
 position = Vector2(70, -33)
+jump_power = 450
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
