@@ -1,4 +1,3 @@
-class_name Enemy
 extends CharacterBody2D
 
 enum States {
@@ -6,11 +5,7 @@ enum States {
 }
 
 
-var health: int = 1:
-	set(value):
-		health = value
-		if value == 0:
-			queue_free()
+var health: int = 1
 
 @export var max_speed: int
 var state : States = States.LEFT
