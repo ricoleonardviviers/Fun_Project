@@ -1,21 +1,39 @@
 class_name Player
 extends CharacterBody2D
 
+
+signal key_collected
+signal key_lost
+
+
 enum States {
 	IDLE, WALK, JUMP, FALL, DEAD
 }
 
-var state: States = States.IDLE
+
 @export var jump_power: int
 @export var max_speed: int
+
+
+var state: States = States.IDLE
 var can_double_jump: int
 var dead: bool
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 # Variables used for level
 var last_checkpoint: Node2D
 var exit: String
 var on_exit: bool
+var has_key: bool:
+	set(value):
+		has_key = true
+		if value:
+			emit_signal("key_collected")
+		else:
+			emit_signal("key_lost")
+
+
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
 
 func _physics_process(delta: float) -> void:
 	match_states(delta)
