@@ -202,8 +202,8 @@ _data = {
 texture_filter = 1
 scale = Vector2(0.15, 0.15)
 script = ExtResource("1_pyoh3")
-jump_power = 350
-max_speed = 175
+jump_power = 900
+max_speed = 250
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -260)
