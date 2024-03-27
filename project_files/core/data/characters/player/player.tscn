@@ -159,6 +159,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mf218"]
+radius = 110.0
+height = 464.0
 
 [sub_resource type="Animation" id="Animation_kqfyg"]
 length = 0.001
@@ -198,6 +200,7 @@ _data = {
 
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
+scale = Vector2(0.15, 0.15)
 script = ExtResource("1_pyoh3")
 jump_power = 350
 max_speed = 175
@@ -205,10 +208,11 @@ max_speed = 175
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8vw1s")
 animation = &"Idle"
-frame_progress = 0.83563
+autoplay = "Idle"
+frame_progress = 0.297628
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -15)
+position = Vector2(0, 28)
 shape = SubResource("CapsuleShape2D_mf218")
 
 [node name="Camera2D" type="Camera2D" parent="."]
