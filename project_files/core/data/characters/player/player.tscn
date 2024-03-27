@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bombn3fmiomqu"]
+[gd_scene load_steps=5 format=3 uid="uid://bombn3fmiomqu"]
+
+[ext_resource type="Script" path="res://core/data/characters/player/player.gd" id="1_pyoh3"]
 
 [sub_resource type="Gradient" id="Gradient_eejfx"]
 
@@ -8,6 +10,9 @@ gradient = SubResource("Gradient_eejfx")
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mf218"]
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_pyoh3")
+jump_power = 350
+max_speed = 175
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.5, -14.75)
@@ -17,3 +22,6 @@ texture = SubResource("GradientTexture1D_1py72")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -15)
 shape = SubResource("CapsuleShape2D_mf218")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -15)
