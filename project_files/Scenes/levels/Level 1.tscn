@@ -41,15 +41,12 @@ texture_region_size = Vector2i(256, 256)
 2:1/0 = 0
 2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:1/0/physics_layer_0/angular_velocity = 0.0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -128, 128, -128, 128, 128, -128, 128)
 3:1/0 = 0
 3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:1/0/physics_layer_0/angular_velocity = 0.0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -128, 128, -128, 128, 128, -128, 128)
 4:1/0 = 0
 4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:1/0/physics_layer_0/angular_velocity = 0.0
-4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -128, 128, -128, 128, 128, -128, 128)
 0:2/0 = 0
 0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:2/0/physics_layer_0/angular_velocity = 0.0
@@ -118,11 +115,11 @@ sources/0 = SubResource("TileSetAtlasSource_jsxsh")
 
 [node name="Level1" type="Node2D"]
 
+[node name="Entrance" parent="." instance=ExtResource("6_lso8d")]
+position = Vector2(35, 327)
+
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(0.3, 0.3)
 tile_set = SubResource("TileSet_p3lrv")
 format = 2
-layer_0/tile_data = PackedInt32Array(327680, 131072, 3, 327681, 196608, 3, 327682, 262144, 3, 262149, 65536, 3, 262152, 131072, 3, 262153, 196608, 3, 262154, 196608, 3, 262155, 196608, 3, 262156, 262144, 3)
-
-[node name="Entrance" parent="." instance=ExtResource("6_lso8d")]
-position = Vector2(107, 327)
+layer_0/tile_data = PackedInt32Array(327680, 131072, 3, 327681, 196608, 3, 327682, 262144, 3, 262149, 65536, 3, 262152, 131072, 3, 262153, 196608, 3, 262154, 196608, 3, 262155, 196608, 3, 262156, 262144, 3, 262144, 196608, 1, 262145, 262144, 1)

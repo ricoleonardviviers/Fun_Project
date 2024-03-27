@@ -10,6 +10,7 @@ var state: States = States.IDLE
 @export var max_speed: int
 var can_double_jump: int
 var dead: bool
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 # Variables used for level
 var last_checkpoint: Node2D
@@ -38,6 +39,8 @@ func match_states(delta: float) -> void:
 				velocity.y = -jump_power
 			velocity.x = 0
 			velocity.y += 980 * delta
+			
+			animated_sprite_2d.animation = "Idle"
 		
 		States.WALK:
 			if is_zero_approx(get_input()):
@@ -50,6 +53,10 @@ func match_states(delta: float) -> void:
 			
 			velocity.x = max_speed * get_input()
 			velocity.y += 980 * delta
+			
+			animated_sprite_2d.animation = "Run"
+			
+			
 		
 		States.JUMP:
 			if is_on_floor():
@@ -78,6 +85,8 @@ func match_states(delta: float) -> void:
 	
 		States.DEAD:
 			velocity.x = 0
+			
+	
 
 func kill() -> void:
 	# run death anim
