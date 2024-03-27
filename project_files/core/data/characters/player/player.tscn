@@ -206,13 +206,14 @@ jump_power = 350
 max_speed = 175
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -260)
 sprite_frames = SubResource("SpriteFrames_8vw1s")
 animation = &"Idle"
 autoplay = "Idle"
 frame_progress = 0.372668
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 28)
+position = Vector2(0, -232)
 shape = SubResource("CapsuleShape2D_mf218")
 
 [node name="Camera2D" type="Camera2D" parent="."]

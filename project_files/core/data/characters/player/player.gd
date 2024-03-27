@@ -80,5 +80,11 @@ func kill() -> void:
 	# run death anim
 	if not dead:
 		state = States.DEAD
+		dead = true
 		await get_tree().create_timer(1.0).timeout
+		state = States.IDLE
+		dead = false
 		global_position = last_checkpoint.global_position
+
+
+
